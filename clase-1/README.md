@@ -36,7 +36,7 @@ Freelance Tips is a web application that represents a community dedicated to sha
 
 <font color="green">
 
-## Despliegue
+## Deployment
 
 The application is deployed on Vercel and can be accessed at [https://freelance-tips.vercel.app/](https://freelance-tips.vercel.app/).
 
