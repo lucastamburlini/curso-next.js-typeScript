@@ -1,0 +1,17 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+.dot-background {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(#9ea8b8 0.8px, #ffffff 0.8px);
+  background-size: 16px 16px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.swal2 {
+  font-family: "Inter", sans-serif;
+}
