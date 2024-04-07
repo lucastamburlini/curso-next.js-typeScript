@@ -6,7 +6,6 @@ const Navbar: React.FC = () => {
       <div>Logo</div>
       <div className="flex gap-8">
         <Link href={"/"}>Home</Link>
-        <Link href={"/about"}>About</Link>
       </div>
     </nav>
   );

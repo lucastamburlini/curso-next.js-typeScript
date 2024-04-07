@@ -13,7 +13,9 @@ export default async function Home() {
     <main className="p-6 w-full max-w-4xl m-auto">
       {data.map((post: Data) => (
         <article key={post.id} className="py-6">
-          <Link href={`/${post.id}`}>{post.title}</Link>
+          <Link href={`/${post.id}`} className="text-3xl font-bold mb-3 ">
+            {post.title}
+          </Link>
           {post.description && <p>{post.description}</p>}
         </article>
       ))}

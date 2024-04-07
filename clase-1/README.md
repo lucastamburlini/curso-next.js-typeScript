@@ -100,13 +100,25 @@ This will start the development server, and you can access the application at ht
 
 ## Environment Variables
 
-The project uses the following environment variables for EmailJS configuration:
+The project uses the following environment variables for configuration:
+
+### EmailJS Configuration
 
 - `EMAILJS_USERID`: Your EmailJS user ID.
 - `EMAILJS_SERVICEID`: Your EmailJS service ID.
 - `EMAILJS_TEMPLATEID`: The ID of the EmailJS template you want to use.
 
-Make sure to create a `.env.local` file in the root of the project and add these environment variables.
+### Firebase Configuration
+
+- `FIREBASE_API_KEY`: Your Firebase API key.
+- `FIREBASE_AUTH_DOMAIN`: Your Firebase authentication domain.
+- `FIREBASE_PROJECT_ID`: Your Firebase project ID.
+- `FIREBASE_STORAGE_BUCKET`: Your Firebase storage bucket.
+- `FIREBASE_MESSAGING_SENDER_ID`: Your Firebase messaging sender ID.
+- `FIREBASE_APP_ID`: Your Firebase app ID.
+- `FIREBASE_MEASUREMENT_ID`: Your Firebase measurement ID.
+
+Make sure to create a `.env.local` file at the root of the project and add these environment variables.
 
 # Playwright Tests
 
@@ -215,11 +227,23 @@ Esto iniciará el servidor de desarrollo y podrás acceder a la aplicación en h
 
 ## Variables de Entorno
 
-El proyecto utiliza las siguientes variables de entorno para la configuración de EmailJS:
+El proyecto utiliza las siguientes variables de entorno:
+
+### Configuración de EmailJS
 
 - `EMAILJS_USERID`: Tu ID de usuario de EmailJS.
 - `EMAILJS_SERVICEID`: El ID de tu servicio de EmailJS.
 - `EMAILJS_TEMPLATEID`: El ID de la plantilla de EmailJS que deseas utilizar.
+
+### Configuración de Firebase
+
+- `FIREBASE_API_KEY`: Tu clave de API de Firebase.
+- `FIREBASE_AUTH_DOMAIN`: El dominio de autenticación de Firebase.
+- `FIREBASE_PROJECT_ID`: El ID de tu proyecto de Firebase.
+- `FIREBASE_STORAGE_BUCKET`: El bucket de almacenamiento de Firebase.
+- `FIREBASE_MESSAGING_SENDER_ID`: El ID del remitente de Firebase.
+- `FIREBASE_APP_ID`: El ID de tu aplicación Firebase.
+- `FIREBASE_MEASUREMENT_ID`: El ID de medición de Firebase.
 
 Asegúrate de crear un archivo `.env.local` en la raíz del proyecto y agregar estas variables de entorno.
 
