@@ -16,7 +16,7 @@ export default function Home() {
     const fetchDataAsync = async () => {
       try {
         const fetchedData = await fetchData(
-          "https://my-json-server.typicode.com/lucastamburlini/db-fake/posts"
+          "https://my-json-server.typicode.com/lucastamburlini/db/posts"
         );
         setData(fetchedData);
       } catch (error) {
@@ -30,8 +30,11 @@ export default function Home() {
   return (
     <main className="p-6 w-full max-w-4xl m-auto">
       {data.map((post: Data) => (
-        <article key={post.id} className="py-6">
-          <Link href={`/${post.id}`} className="text-3xl font-bold mb-3 ">
+        <article key={post.id} className="py-6 flex flex-col gap-1">
+          <Link
+            href={`/${post.id}`}
+            className="text-3xl font-bold text-white hover:text-orange-500 transition-colors duration-200"
+          >
             {post.title}
           </Link>
           {post.description && <p>{post.description}</p>}

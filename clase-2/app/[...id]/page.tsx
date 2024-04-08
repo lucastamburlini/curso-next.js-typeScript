@@ -5,7 +5,7 @@ export default async function Page({
 }: {
   params: { id: number };
 }) {
-  const post = await fetchData(`https://my-json-server.typicode.com/lucastamburlini/db-fake/posts/${id}`)
+  const post = await fetchData(`https://my-json-server.typicode.com/lucastamburlini/db/posts/${id}`)
   return (
     <main className="p-6 w-full max-w-4xl m-auto">
     <article className="p-6 border rounded-lg shadow-lg">

@@ -8,6 +8,7 @@ export async function fetchData(url: string) {
 
     return res.json();
   } catch (error) {
-    throw new Error(`Failed to fetch data: ${error.message}`);
+    throw new Error(`Failed to fetch data`);
+    
   }
 }
