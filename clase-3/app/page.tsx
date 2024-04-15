@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Product } from "./types";
 
 async function fetchData() {
   const response = await fetch("https://fakestoreapi.com/products");
@@ -7,15 +8,8 @@ async function fetchData() {
   return products;
 }
 
-interface Products {
-  id: number;
-  title: string;
-  image: string;
-  price: number;
-}
-
 export default async function Home() {
-  const products: Products[] = await fetchData();
+  const products: Product[] = await fetchData();
 
   return (
     <main>
@@ -23,9 +17,9 @@ export default async function Home() {
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <ul className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
-              <li className="flex h-80 min-h-full flex-col aspect-h-1 aspect-w-1  overflow-hidden rounded-lg bg-white xl:aspect-h-8 xl:aspect-w-7">
+              <li  key={product.id} className="flex h-80 min-h-full flex-col aspect-h-1 aspect-w-1  overflow-hidden rounded-lg bg-white xl:aspect-h-8 xl:aspect-w-7">
                 <Link
-                  key={product.id}
+                 
                   href={`/${product.id}`}
                   className="group flex items-center justify-center h-60 object-cover object-center"
                 >
@@ -39,11 +33,11 @@ export default async function Home() {
                   />
                 </Link>
                 <div className="p-2">
-                  <h3 className="text-sm text-gray-700">
+                  <h3 className="text-xs text-gray-700">
                     {product.title}
                   </h3>
                   <p className="text-lg font-medium text-gray-900">
-                    {product.price}
+                    $ {product.price}
                   </p>
                 </div>
               </li>

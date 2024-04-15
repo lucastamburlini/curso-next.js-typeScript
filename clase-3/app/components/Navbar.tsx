@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
   return (
     <nav className="mx-auto max-w-2xl p-4 lg:max-w-7xl lg:px-8 flex justify-between">
       <div className="flex flex-col text-5x1  rounded p-1 justify-center">
@@ -30,6 +30,4 @@ const Navbar: React.FC = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

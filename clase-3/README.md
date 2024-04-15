@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Requisitos:
 
-## Getting Started
+- [] Crear un proyecto que consista de dos vistas
+  Una de estas vistas tiene que desplegar información estática traida de una api desde un componente server side (ADVERTENCIA: no hacer trampa, no importar un componente hijo cliente al componente server side)
+- [] La otra vista tiene que consistir de un componente client side que tambien traiga informacion desde una API, pero que tiene que ofrecerle al usuario la capacidad de interacturar con esta informacion
 
-First, run the development server:
+Recomendaciones:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [] Asegurarse de que el proyecto tenga consistencia estilistica
+- [] Concentrarse en la funcionalidad e interactividad (en particular en la vista de cliente)
+
+Restricciones tecnológicas:
+
+- [] Si o si se debe utilizar NextJS 14
+- [] No crear un servidor externo a la aplicación
+
+Restricciones de trabajo:
+
+- [] Tiene que ser realizado individualmente
+
+## Tecnologías utilizadas
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+## Instalación
+
+Clona este repositorio en tu máquina local:
+
+```
+git clone https://github.com/lucastamburlini/curso-next.js-typeScript.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navega hasta la carpeta "clase-3":
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cd curso-next.js-typeScript/clase-3
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Instala las dependencias del proyecto:
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Uso
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Inicia la aplicación en modo de desarrollo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+Abre tu navegador y accede a http://localhost:3000 para ver la aplicación en funcionamiento.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## API Utilizada
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+API para traer productos: https://fakestoreapi.com/products
