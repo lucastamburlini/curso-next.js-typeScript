@@ -16,32 +16,39 @@ interface Products {
 
 export default async function Home() {
   const products: Products[] = await fetchData();
- 
+
   return (
     <main>
       <div className="bg-gray-100">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 className="sr-only">Products</h2>
-
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          <ul className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
-              <Link key={product.id} href={`/${product.id}`} className="group">
-                <div className="h-80 items-center justify-center flex aspect-h-1 aspect-w-1  overflow-hidden rounded-lg bg-white xl:aspect-h-8 xl:aspect-w-7">
+              <li className="flex h-80 min-h-full flex-col aspect-h-1 aspect-w-1  overflow-hidden rounded-lg bg-white xl:aspect-h-8 xl:aspect-w-7">
+                <Link
+                  key={product.id}
+                  href={`/${product.id}`}
+                  className="group flex items-center justify-center h-60 object-cover object-center"
+                >
                   <Image
                     src={product.image}
                     alt={product.title}
-                    className="max-w-full max-h-80 object-cover object-center group-hover:opacity-75 p-6"
+                    className="max-w-full max-h-full group-hover:opacity-75 p-2"
                     width={200}
                     height={200}
+                    priority={true}
                   />
+                </Link>
+                <div className="p-2">
+                  <h3 className="text-sm text-gray-700">
+                    {product.title}
+                  </h3>
+                  <p className="text-lg font-medium text-gray-900">
+                    {product.price}
+                  </p>
                 </div>
-                <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">
-                  {product.price}
-                </p>
-              </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </main>
