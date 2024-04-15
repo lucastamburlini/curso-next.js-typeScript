@@ -30,7 +30,7 @@ export default async function Home() {
                   <Image
                     src={product.image}
                     alt={product.title}
-                    className="max-w-full object-cover object-center group-hover:opacity-75 p-3"
+                    className="max-w-full max-h-80 object-cover object-center group-hover:opacity-75 p-6"
                     width={200}
                     height={200}
                   />
