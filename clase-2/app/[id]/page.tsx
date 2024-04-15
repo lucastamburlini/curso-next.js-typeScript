@@ -1,11 +1,10 @@
-import { fetchData } from "../api/api";
-
 export default async function Page({
   params: { id },
 }: {
   params: { id: number };
 }) {
-  const post = await fetchData(`https://my-json-server.typicode.com/lucastamburlini/db/posts/${id}`)
+  const response = await fetch(`https://my-json-server.typicode.com/lucastamburlini/db/posts/${id}`)
+  const post = await response.json()
   return (
     <main className="p-6 w-full max-w-4xl m-auto">
     <article className="p-6 border rounded-lg shadow-lg">

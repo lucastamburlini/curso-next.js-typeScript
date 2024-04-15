@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { fetchData } from "./api/api";
 
 interface Data {
   id: number;
@@ -14,14 +13,11 @@ export default function Home() {
 
   useEffect(() => {
     const fetchDataAsync = async () => {
-      try {
-        const fetchedData = await fetchData(
-          "https://my-json-server.typicode.com/lucastamburlini/db/posts"
-        );
-        setData(fetchedData);
-      } catch (error) {
-        throw new Error("Error with fetching data");
-      }
+      const response = await fetch(
+        "https://my-json-server.typicode.com/lucastamburlini/db/posts"
+      );
+      const data = await response.json();
+      setData(data);
     };
 
     fetchDataAsync();
