@@ -25,7 +25,7 @@ export default function Page({ params }: { params: { id: number } }) {
     <section className="">
       {loading ? (
         <div className="min-h-96 px-4 my-20 m-auto sm:px-6 lg:max-w-7xl lg:px-8 justify-center items-center flex">
-          <Spinner/>
+          <Spinner />
         </div>
       ) : (
         productDetail && (
@@ -56,15 +56,16 @@ export default function Page({ params }: { params: { id: number } }) {
                       </p>
 
                       <div className="mt-6">
-                        <h4 className="">Reviews</h4>
                         <div className="flex items-center">
-                          <p className="">{productDetail.rating.rate} out of 5 stars</p>
-                          <a
-                            href="#"
-                            className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
-                          >
-                            {productDetail.rating.count}
-                          </a>
+                          <h4 className="font-bold">Reviews</h4>
+                          <p className="ml-3 text-xs font-medium text-orange-500">
+                            ({productDetail.rating.count})
+                          </p>
+                        </div>
+                        <div className="flex items-center">
+                          <p className="">
+                            {productDetail.rating.rate} out of 5 stars
+                          </p>
                         </div>
                       </div>
                     </section>
