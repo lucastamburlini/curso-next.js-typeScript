@@ -55,7 +55,7 @@ export default function Page({ params }: { params: { id: number } }) {
                         ${productDetail.price}
                       </p>
 
-                      <div className="mt-6">
+                      <div className="mt-1">
                         <div className="flex items-center">
                           <h4 className="font-bold">Reviews</h4>
                           <p className="ml-3 text-xs font-medium text-orange-500">

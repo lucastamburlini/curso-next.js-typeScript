@@ -26,7 +26,7 @@ export default async function Home() {
                   <Image
                     src={product.image}
                     alt={product.title}
-                    className="max-w-full max-h-full group-hover:opacity-75 p-2"
+                    className="max-w-full max-h-full group-hover:opacity-75 p-10"
                     width={200}
                     height={200}
                     priority={true}
