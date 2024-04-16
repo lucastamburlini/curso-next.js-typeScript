@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Product } from "../types";
+import { Product } from "../lib/definitions";
 import Image from "next/image";
+import Spinner from "../ui/Spinner";
 
 export default function Page({ params }: { params: { id: number } }) {
   const { id } = params;
@@ -24,11 +25,11 @@ export default function Page({ params }: { params: { id: number } }) {
     <section className="">
       {loading ? (
         <div className="min-h-96 px-4 my-20 m-auto sm:px-6 lg:max-w-7xl lg:px-8 justify-center items-center flex">
-          Cargando...
+          <Spinner/>
         </div>
       ) : (
         productDetail && (
-          <article className="min-h-96 mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8 justify-center flex">
+          <article className="min-h-96 mx-auto max-w-2xl px-4 py-14 sm:px-6 lg:max-w-7xl lg:px-8 justify-center flex">
             <div className="flex items-center w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl justify-center">
               <div className="relative bg-gray-100 flex w-full items-center overflow-hidden px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 rounded">
                 <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
@@ -47,27 +48,22 @@ export default function Page({ params }: { params: { id: number } }) {
                       {productDetail.title}
                     </h2>
 
-                    <section
-                      aria-labelledby="information-heading"
-                      className="mt-2"
-                    >
-                      <h3 id="information-heading" className="sr-only">
-                        Product information
-                      </h3>
+                    <section className="mt-2 flex flex-col gap-3">
+                      <p className="text-xs">{productDetail.description}</p>
 
                       <p className="text-2xl text-gray-900">
                         ${productDetail.price}
                       </p>
 
                       <div className="mt-6">
-                        <h4 className="sr-only">Reviews</h4>
+                        <h4 className="">Reviews</h4>
                         <div className="flex items-center">
-                          <p className="sr-only">3.9 out of 5 stars</p>
+                          <p className="">{productDetail.rating.rate} out of 5 stars</p>
                           <a
                             href="#"
                             className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
                           >
-                            117 reviews
+                            {productDetail.rating.count}
                           </a>
                         </div>
                       </div>

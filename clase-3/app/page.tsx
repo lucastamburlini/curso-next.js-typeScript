@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "./types";
+import { Product } from "./lib/definitions";
 
 async function fetchData() {
   const response = await fetch("https://fakestoreapi.com/products");

@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="mx-auto max-w-2xl p-4 lg:max-w-7xl lg:px-8 flex justify-between">
       <div className="flex flex-col text-5x1  rounded p-1 justify-center">
         <div className="text-xs font-bold">
-          3° Clase - Next.js con TypeScript
+        3rd Class - Next.js with TypeScript
         </div>
         <div className="text-xs text-orange-500">Hedy Software</div>
       </div>
