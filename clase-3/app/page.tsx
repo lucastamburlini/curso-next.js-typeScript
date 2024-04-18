@@ -30,9 +30,9 @@ export default async function Home() {
                       className="max-w-full max-h-full group-hover:opacity-75"
                       width={300}
                       height={300}
-                      priority={true}
                     />
                   </Link>
+
                   <div className="p-2">
                     <h3 className="text-lg font-bold text-gray-700">
                       {character.name}

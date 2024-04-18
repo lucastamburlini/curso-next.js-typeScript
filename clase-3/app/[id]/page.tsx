@@ -7,17 +7,14 @@ export default function Page({ params }: { params: { id: number } }) {
   const { id } = params;
 
   const [character, setCharacter] = useState<Character>();
-  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    setLoading(true);
     async function fetchDetailData() {
       const response = await fetch(
         `https://rickandmortyapi.com/api/character/${id}`
       );
       const character = await response.json();
       setCharacter(character);
-      setLoading(false);
     }
     fetchDetailData();
   }, []);
@@ -36,7 +33,6 @@ export default function Page({ params }: { params: { id: number } }) {
                     className="max-w-full max-h-full group-hover:opacity-75"
                     width={300}
                     height={300}
-                    priority={true}
                   />
                 </div>
                 <div className="h-80 sm:col-span-8 lg:col-span-7 flex flex-col justify-center">
