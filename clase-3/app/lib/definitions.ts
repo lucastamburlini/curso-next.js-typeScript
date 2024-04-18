@@ -1,12 +1,20 @@
-export interface Product {
+export interface Character {
   id: number;
-  title: string;
-  image: string;
-  price: number;
-  description: string;
-  category: string;
-  rating: {
-    rate: number;
-    count: number;
+  name: string;
+  status: string;
+  species: string;
+  type: string;
+  gender: string;
+  origin: {
+    name: string;
+    url: string;
   };
+  location: {
+    name: string;
+    url: string;
+  };
+  image: string;
+  episode: string[];
+  url: string;
+  created: string;
 }
